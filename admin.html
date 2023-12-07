@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqja e Administratorit</title>
+    <!-- Mund të shtoni etiketa të tjera meta, fletëstile ose skripte këtu -->
+</head>
+<body>
+
+    <header>
+        <h1>Mirësevini në Faqen e Administratorit</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('regjistrimi')">Regjistrimi</a></li>
+            <li><a href="#" onclick="loadContent('detyrat')">Detyrat</a></li>
+            <li><a href="#" onclick="loadContent('njoftimet')">Njoftimet</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="content">
+            <!-- Këtu do të vendosni përmbajtjen e faqes në varësi të klikimit në menu -->
+            <h2>Faqja Kryesore</h2>
+            <p>Miresevini në faqen kryesore të Administratorit.</p>
+        </section>
+    </main>
+    <script>
+        // Kjo funksion shërben për të ndryshuar përmbajtjen e faqes në varësi të menuselektuar
+        function loadContent(contentType) {
+            var contentSection = document.getElementById('content');
+            switch (contentType) {
+                case 'regjistrimi':
+                    contentSection.innerHTML = '<h2>Regjistrimi</h2><p>Këtu mund të gjeni informacion rreth regjistrimit.</p>';
+                    break;
+                case 'detyrat':
+                    contentSection.innerHTML = '<h2>Detyrat</h2><p>Këtu mund të gjeni informacion rreth detyrave.</p>';
+                    break;
+                case 'njoftimet':
+                    contentSection.innerHTML = '<h2>Njoftimet</h2><p>Këtu mund të gjeni informacion rreth njoftimeve.</p>';
+                    break;
+                default:
+                    contentSection.innerHTML = '<h2>Faqja Kryesore</h2><p>Miresevini në faqen kryesore të administratorit.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>

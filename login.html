@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Mund të shtoni etiketa të tjera meta, fletëstile ose skripte këtu -->
+</head>
+<body>
+
+    <header>
+        <h1>Faqja e Hyrjes</h1>
+    </header>
+
+    <main>
+        <form action="javascript:void(0);" onsubmit="login()">
+            <label for="username">Përdoruesi:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Fjalëkalimi:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Hyr</button>
+        </form>
+    </main>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'admin' && password === 'admin123') {
+                window.location.href = 'admin.html';
+            } else if (username === 'puntori' && password === 'puntori123') {
+                window.location.href = 'puntori.html';
+            } else {
+                alert('Kredenciale invalide. Ju lutem provoni përsëri.');
+            }
+        }
+    </script>
+
+</body>
+</html>
