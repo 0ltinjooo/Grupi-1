@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+    <script>
+        function loadContent(url, targetElement) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.querySelector(targetElement).innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+
+
+        function loadPuntor() {
+            loadContent("puntoret.html", `.content`);
+        }
+    </script>
+</head>
+
+<body>
+    <aside>
+        <h3>Admin Panel</h3>
+        <ul>
+            <li><a href="#">Punet</a></li>
+            <li><a href="#">Puntoret</a></li>
+            <li><a href="javascript:void(0);" onclick="loadPuntor()">Shto Puntoret</a></li>
+            <li><a href="#">Fshi Puntoret</a></li>
+            <li><a href="index.html">Dil</a></li>
+        </ul>
+    </aside>
+</body>
+
+</html>
