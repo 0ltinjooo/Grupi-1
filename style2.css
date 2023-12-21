@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    min-height: 100vh;
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #333;
+}
